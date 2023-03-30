@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 import base64
 import matplotlib.dates as mdates
 import seaborn as sns
+import lxml
 
 hide_menu = """ 
 <style>
