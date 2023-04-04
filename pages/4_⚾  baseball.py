@@ -108,8 +108,13 @@ if all_combined:
 
 
 
+# stadium Wise Analysis
 
-
-
-
+stadiums = MLBmap.groupby('stadium')['gameId'].count().reset_index()
+# stadiums
+res = st.selectbox('Select the player name', stadiums['stadium'].unique())
+Trop = MLBmap[MLBmap.stadium == res]
+fig, ax = plt.subplots(figsize=(3, 2))
+ax.scatter(Trop['our.x'],Trop['our.y'], s=1,c='r', marker= '.')
+st.pyplot(fig)
 
